@@ -1,0 +1,104 @@
+﻿body {
+    background-color: #f2cd68;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #cc6221;
+}
+
+    nav li a {
+        float: left;
+        display: block;
+        color: #dec8f7;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 16px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: inline;
+        padding: 16px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li a:hover {
+        background-color: #5728b5;
+        color: #cce31b;
+    }
+
+.menu-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.menu-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+    .tab.active {
+        color: #e74c3c;
+        border-bottom: 3px solid #e74c3c;
+    }
+
+.menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.menu-item {
+    text-align: left;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+    .menu-item img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .menu-item h3 {
+        margin: 10px 0 5px;
+    }
+
+    .menu-item p {
+        margin: 0;
+        font-size: 14px;
+        color: #777;
+    }
+
+.price {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 8px;
+    display: block;
+}
+
+
+footer {
+    background-color: #cc6221;
+    height: 25px;
+    text-align: center;
+    color: antiquewhite;
+}
