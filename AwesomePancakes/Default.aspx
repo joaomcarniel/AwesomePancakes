@@ -3,16 +3,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="CSS/Style.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="menu-container" id="main-menu">
       <div class="menu-tabs">
-        <button type="button" class="tab active" data-target="sweet-pancakes">🥞🍓 Sweet Pancakes</button>
-        <button type="button" class="tab" data-target="salt-pancakes">🥞🍳 Salt Pancakes</button>
-        <button type="button" class="tab" data-target="snacks">🍟 Snacks & Sides</button>
-        <button type="button" class="tab" data-target="salads">🥗 Salads</button>
-        <button type="button" class="tab" data-target="drinks">🥤 Drinks</button>
+        <button type="button" class="tab active" data-target="Pancake">🥞🍓 Sweet Pancakes</button>
+        <button type="button" class="tab" data-target="Pancake">🥞🍳 Salt Pancakes</button>
+        <button type="button" class="tab" data-target="Pancake">🍟 Snacks & Sides</button>
+        <button type="button" class="tab" data-target="Pancake">🥗 Salads</button>
+        <button type="button" class="tab" data-target="Pancake">🥤 Drinks</button>
       </div>
 
       <div id="menu-content"></div>

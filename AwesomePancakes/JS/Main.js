@@ -3,44 +3,38 @@
 
     // --- Default.aspx --- //
     if (currentPage.includes("default")) {
-        const menuData = {
-            pizza: [
-                { name: "La Rossa", desc: "Tomato sauce, garlic, basil (no cheese)", price: "$15 / $24" },
-                { name: "Margherita", desc: "Tomato sauce, mozzarella, basil", price: "$17 / $26" }
-            ],
-            burgers: [
-                { name: "Classic Burger", desc: "Beef, cheese, tomato, lettuce", price: "$12" }
-            ],
-            snacks: [
-                { name: "Fries", desc: "Crispy golden fries", price: "$5" }
-            ],
-            salads: [
-                { name: "Caesar Salad", desc: "Romaine, croutons, parmesan", price: "$9" }
-            ],
-            drinks: [
-                { name: "Coca-Cola", desc: "Cold and refreshing", price: "$3" }
-            ]
-        };
 
         function renderMenu(category) {
-            const items = menuData[category];
-            let html = '<div class="menu-items">';
-            items.forEach(item => {
-                html += `
-                    <div class="menu-item">
-                        <h3>${item.name}</h3>
-                        <p>${item.desc}</p>
-                        <span class="price">${item.price}</span>
-                    </div>`;
+            $.ajax({
+                type: "POST",
+                url: "Default.aspx/GetMenuItems",
+                data: JSON.stringify({ category: category }), // Envia o parâmetro!
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    const items = response.d;
+                    let html = '<div class="menu-items">';
+                    items.forEach(item => {
+                        html += `
+                            <div class="menu-item">
+                                <h3>${item.name}</h3>
+                                <p>${item.desc}</p>
+                                <span class="price">${item.price}</span>
+                            </div>`;
+                    });
+                    html += '</div>';
+                    $("#menu-content").html(html);
+                },
+                error: function (xhr, status, error) {
+                    console.error("Erro ao carregar dados:", error);
+                }
             });
-            html += '</div>';
-            $("#menu-content").html(html);
         }
 
-        renderMenu("pizza");
+        renderMenu("Pancake");
 
-        $(document).on("click", ".tab", function (event) {
-            event.preventDefault();
+        // troca de aba
+        $(".tab").click(function () {
             $(".tab").removeClass("active");
             $(this).addClass("active");
             const target = $(this).data("target");
@@ -58,6 +52,22 @@
 
         $("#show-more").click(function () {
             $(".extra-info").slideToggle();
+        });
+    }
+
+    // --- FAQ.aspx --- //
+    if (currentPage.includes("faq")) {
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+            const question = item.querySelector(".faq-question");
+
+            question.addEventListener("click", () => {
+                faqItems.forEach(i => {
+                    if (i !== item) i.classList.remove("active");
+                });
+                item.classList.toggle("active");
+            });
         });
     }
 });
