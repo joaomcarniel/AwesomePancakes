@@ -38,6 +38,7 @@ namespace AwesomePancakes
                         price =$"€{reader["PancakePrice"]}"
                     });
                 }
+                conn.Close();
             }
 
             return items;

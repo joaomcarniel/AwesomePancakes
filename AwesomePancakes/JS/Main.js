@@ -8,7 +8,7 @@
             $.ajax({
                 type: "POST",
                 url: "Default.aspx/GetMenuItems",
-                data: JSON.stringify({ category: category }), // Envia o parâmetro!
+                data: JSON.stringify({ category: category }),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
@@ -26,14 +26,13 @@
                     $("#menu-content").html(html);
                 },
                 error: function (xhr, status, error) {
-                    console.error("Erro ao carregar dados:", error);
+                    console.error("Error:", error);
                 }
             });
         }
 
         renderMenu("Pancake");
 
-        // troca de aba
         $(".tab").click(function () {
             $(".tab").removeClass("active");
             $(this).addClass("active");
@@ -55,12 +54,4 @@
         });
     }
 
-    // --- FAQ.aspx --- //
-    if (currentPage.includes("FAQ") || currentPage.includes("faq")) {
-        console.info('Info');
-        $(".faq-answer").hide();
-        $("h4").click(function () {
-            $(this).next("p").slideToggle(500);
-        });
-    }
 });

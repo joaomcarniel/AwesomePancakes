@@ -20,10 +20,10 @@
                 <li> <a href="FAQ.aspx"> FAQ   </a></li>
             </ul>
         </nav>
-        <div>
+        <main>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
+        </main>
         <footer>
             <p>Design by Joao</p>
         </footer>
