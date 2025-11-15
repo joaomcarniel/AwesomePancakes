@@ -16,8 +16,9 @@
             <ul>
                 <li> <a href="Default.aspx"> Home   </a></li>
                 <li> <a href="About.aspx"> About   </a></li>
-                <li> <a href="Members.aspx"> Members   </a></li>
+                <li> <a href="Staff.aspx"> Staff   </a></li>
                 <li> <a href="FAQ.aspx"> FAQ   </a></li>
+                <li> <a href="Contact.aspx"> Contact   </a></li>
             </ul>
         </nav>
         <main>

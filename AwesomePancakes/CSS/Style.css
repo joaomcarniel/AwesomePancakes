@@ -184,3 +184,145 @@ footer {
     align-items: center;
     color: antiquewhite;
 }
+
+.staff-body {
+    width: 80%;
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.staff-title {
+    background-color: #cc6221;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.staff-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.staff-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 20px;
+    transition: transform .2s;
+}
+
+    .staff-card:hover {
+        transform: scale(1.03);
+    }
+
+.staff-photo {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.staff-card h3 {
+    margin: 12px 0 5px;
+}
+
+.staff-card h4 {
+    margin: 0 0 12px;
+    color: #e74c3c;
+}
+
+.staff-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.about-body {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+    .about-body h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+.highlight {
+    color: #cc6221;
+    font-weight: bold;
+}
+
+
+.contact-body input,
+.contact-body textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-container {
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.contact-header {
+    border-radius: 12px;
+    background-color: #cc6221;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.contact-body textarea {
+    resize: vertical;
+}
+
+.contact-body .tab.active {
+    background-color: #cc6221;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+    .contact-body .tab.active:hover {
+        background-color: #e74c3c;
+    }
+
+.contact-question {
+    border-radius: 12px;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #e8f0fe;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.contact-answer {
+    background-color: #e3e1e1;
+    border-radius: 12px;
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    margin-bottom: 15px;
+}
