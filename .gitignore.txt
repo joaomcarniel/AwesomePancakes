@@ -165,3 +165,11 @@ ScaffoldingReadMe.txt
 # Other
 *.suo
 *.sln.docstates
+
+# GitHub Copilot / SQLite temp files
+CopilotIndices/
+*.db
+*.db-shm
+*.db-wal
+.copilot/
+
