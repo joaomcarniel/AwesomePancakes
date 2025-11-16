@@ -1,58 +1,68 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Web.UI;
+using System.Web.Services;
 
 namespace AwesomePancakes
 {
-    public partial class Contact : Page
+    public partial class Contact : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
-        protected void btnEnviar_Click(object sender, EventArgs e)
+        [WebMethod]
+        public static List<string> GetBusySchedules(string date)
         {
-            string nome = txtNome.Text.Trim();
-            string email = txtEmail.Text.Trim();
-            string mensagem = txtMensagem.Text.Trim();
+            List<string> busySchedules = new List<string>();
+            string connString = System.Configuration.ConfigurationManager.ConnectionStrings["PancakeDB"].ConnectionString;
 
-            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(mensagem))
+            using (SqlConnection conn = new SqlConnection(connString))
             {
-                lblStatus.ForeColor = System.Drawing.Color.Red;
-                lblStatus.Text = "Todos os campos são obrigatórios!";
-                return;
+                string query = "SELECT TimeBooking FROM Booking WHERE CONVERT(date, DateBooking) = @DateBooking";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@DateBooking", DateTime.Parse(date).Date);
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    busySchedules.Add(reader["TimeBooking"].ToString());
+                }
             }
+
+            return busySchedules;
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            string name = txtName.Text;
+            string email = txtEmail.Text;
+            string date = txtDate.Text;
+            string time = Request.Form["ddlSchedule"];
+            string message = txtMessage.Text;
 
             string connString = System.Configuration.ConfigurationManager.ConnectionStrings["PancakeDB"].ConnectionString;
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                string query = "INSERT INTO Bookings (NameBooking, EmailBooking, BookingMessage, BookingDate) VALUES (@Name, @Email, @Message, @DataEnvio)";
+                string query = @"INSERT INTO Booking 
+                                (NameBooking, EmailBooking, DateBooking, TimeBooking, MessageBooking, ContactDate)
+                                VALUES (@name, @email, @date, @time, @message, GETDATE())";
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Name", nome);
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Message", mensagem);
-                    cmd.Parameters.AddWithValue("@BookingDate", DateTime.Now);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@date", date);
+                cmd.Parameters.AddWithValue("@time", time);
+                cmd.Parameters.AddWithValue("@message", message);
 
-                    try
-                    {
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        lblStatus.ForeColor = System.Drawing.Color.Green;
-                        lblStatus.Text = "Mensagem enviada com sucesso!";
-
-                        txtNome.Text = txtEmail.Text = txtMensagem.Text = "";
-                    }
-                    catch (Exception ex)
-                    {
-                        lblStatus.ForeColor = System.Drawing.Color.Red;
-                        lblStatus.Text = "Erro ao enviar mensagem: " + ex.Message;
-                    }
-                }
+                conn.Open();
+                cmd.ExecuteNonQuery();
             }
+
+            lblStatus.Text = "Booking Sent!";
         }
     }
 }

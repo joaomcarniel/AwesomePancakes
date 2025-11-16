@@ -1,35 +1,36 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="AwesomePancakes.Site1" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
 
-    <link rel="stylesheet" href="style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" href="<%= ResolveUrl("~/CSS/Style.css") %>" />
 </head>
+
 <body>
     <form id="form1" runat="server">
         <nav>
             <ul>
-                <li> <a href="Default.aspx"> Home   </a></li>
-                <li> <a href="About.aspx"> About   </a></li>
-                <li> <a href="Staff.aspx"> Staff   </a></li>
-                <li> <a href="FAQ.aspx"> FAQ   </a></li>
-                <li> <a href="Contact.aspx"> Contact   </a></li>
+                <li><a href="Default.aspx">Home</a></li>
+                <li><a href="About.aspx">About</a></li>
+                <li><a href="Staff.aspx">Staff</a></li>
+                <li><a href="FAQ.aspx">FAQ</a></li>
+                <li><a href="Contact.aspx">Contact</a></li>
             </ul>
         </nav>
+
         <main>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" />
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
         </main>
+
         <footer>
             <p>Design by Joao</p>
         </footer>
     </form>
-
-    
 </body>
 </html>
