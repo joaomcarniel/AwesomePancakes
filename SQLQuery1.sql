@@ -38,6 +38,19 @@
 
 --USE PancakeDB;
 
-SELECT * FROM Pancakes;
+-- SELECT * FROM MenuItem;
 
-
+--INSERT INTO MenuItem(MenuItemName, MenuItemDescription, MenuItemPrice, MenuItemImage, IsActive, MenuItemCategory)
+--VALUES
+--('Syrup Pancake', 'Delicious pancake with honey syrup on top',11,'', 1, 'Pancake'),
+--('Chocolate Pancake', 'Delicious pancake with creamy chocolate on top',11,'', 1, 'Pancake' ),
+--('Strawberry Pancake', 'Delicious pancake with vivid strawberries on top',11,'', 1, 'Pancake'),
+--('Blueberry Pancake', 'Delicious pancake with vivid blueberries on top',11,'', 1, 'Pancake'),
+--('Nutella Pancake', 'Delicious pancake with nutella on top',12,'', 1, 'Pancake'),
+--('French Fries', 'Skinny fries with parmesan on top', 5,'', 1, 'Side'),
+--('Sweet Potato Fries', 'Skinny sweet potato fries with pepper', 5,'', 1, 'Side'),
+--('Side Salad', 'Lettuce, onions, tomato and carrots with creamy garlic on top', 6,'', 1, 'Salad'),
+--('Coke', 'Coca Cola', 3.5,'', 1, 'Drink'),
+--('Fanta', 'Fanta Orange', 3.5,'', 1, 'Drink'),
+--('Still Water', 'Water in Bottow', 3.5,'', 1, 'Drink'),
+--('Sparkling Water', 'Water in Bottow', 3.5,'', 1, 'Drink');

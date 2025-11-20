@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\AwesomePancakes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|c:\\awesomepancakes\\awesomepancakes\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|solutionrelative:awesomepancakes\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|c:\\awesomepancakes\\awesomepancakes\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|solutionrelative:awesomepancakes\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|c:\\awesomepancakes\\awesomepancakes\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|solutionrelative:awesomepancakes\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|c:\\awesomepancakes\\awesomepancakes\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|solutionrelative:awesomepancakes\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|c:\\awesomepancakes\\awesomepancakes\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|solutionrelative:awesomepancakes\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +26,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Style.css",
+              "DocumentMoniker": "C:\\AwesomePancakes\\AwesomePancakes\\CSS\\Style.css",
+              "RelativeDocumentMoniker": "AwesomePancakes\\CSS\\Style.css",
+              "ToolTip": "C:\\AwesomePancakes\\AwesomePancakes\\CSS\\Style.css",
+              "RelativeToolTip": "AwesomePancakes\\CSS\\Style.css",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAswJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T13:14:58.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Main.js",
+              "DocumentMoniker": "C:\\AwesomePancakes\\AwesomePancakes\\JS\\Main.js",
+              "RelativeDocumentMoniker": "AwesomePancakes\\JS\\Main.js",
+              "ToolTip": "C:\\AwesomePancakes\\AwesomePancakes\\JS\\Main.js",
+              "RelativeToolTip": "AwesomePancakes\\JS\\Main.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-20T13:11:09.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Default.aspx.cs",
               "DocumentMoniker": "C:\\AwesomePancakes\\AwesomePancakes\\Default.aspx.cs",
               "RelativeDocumentMoniker": "AwesomePancakes\\Default.aspx.cs",
               "ToolTip": "C:\\AwesomePancakes\\AwesomePancakes\\Default.aspx.cs",
               "RelativeToolTip": "AwesomePancakes\\Default.aspx.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T12:41:06.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\AwesomePancakes\\AwesomePancakes\\Default.aspx",
               "RelativeDocumentMoniker": "AwesomePancakes\\Default.aspx",
