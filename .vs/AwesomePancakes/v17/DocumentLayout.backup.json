@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\AwesomePancakes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|c:\\awesomepancakes\\awesomepancakes\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|solutionrelative:awesomepancakes\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|c:\\awesomepancakes\\awesomepancakes\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|solutionrelative:awesomepancakes\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|c:\\awesomepancakes\\awesomepancakes\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|solutionrelative:awesomepancakes\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|c:\\awesomepancakes\\awesomepancakes\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{E437210B-051B-4352-A0F1-C4F4A349D70F}|AwesomePancakes\\AwesomePancakes.csproj|solutionrelative:awesomepancakes\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "About.aspx",
-              "DocumentMoniker": "C:\\AwesomePancakes\\AwesomePancakes\\About.aspx",
-              "RelativeDocumentMoniker": "AwesomePancakes\\About.aspx",
-              "ToolTip": "C:\\AwesomePancakes\\AwesomePancakes\\About.aspx",
-              "RelativeToolTip": "AwesomePancakes\\About.aspx",
+              "Title": "Site.Master",
+              "DocumentMoniker": "C:\\AwesomePancakes\\AwesomePancakes\\Site.Master",
+              "RelativeDocumentMoniker": "AwesomePancakes\\Site.Master",
+              "ToolTip": "C:\\AwesomePancakes\\AwesomePancakes\\Site.Master",
+              "RelativeToolTip": "AwesomePancakes\\Site.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-16T21:13:08.348Z",
+              "WhenOpened": "2025-11-20T12:32:56.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Style.css",
+              "DocumentMoniker": "C:\\AwesomePancakes\\AwesomePancakes\\CSS\\Style.css",
+              "RelativeDocumentMoniker": "AwesomePancakes\\CSS\\Style.css",
+              "ToolTip": "C:\\AwesomePancakes\\AwesomePancakes\\CSS\\Style.css",
+              "RelativeToolTip": "AwesomePancakes\\CSS\\Style.css",
+              "ViewState": "AgIAAIcBAAAAAAAAAAAswLgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T12:31:54.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Contact.aspx",
+              "DocumentMoniker": "C:\\AwesomePancakes\\AwesomePancakes\\Contact.aspx",
+              "RelativeDocumentMoniker": "AwesomePancakes\\Contact.aspx",
+              "ToolTip": "C:\\AwesomePancakes\\AwesomePancakes\\Contact.aspx",
+              "RelativeToolTip": "AwesomePancakes\\Contact.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-20T12:21:55.683Z",
               "EditorCaption": ""
             }
           ]

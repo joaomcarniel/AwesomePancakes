@@ -18,7 +18,8 @@
                 <li><a href="About.aspx">About</a></li>
                 <li><a href="Staff.aspx">Staff</a></li>
                 <li><a href="FAQ.aspx">FAQ</a></li>
-                <li><a href="Contact.aspx">Contact</a></li>
+                <li><a href="Booking.aspx">Booking</a></li>
+                <li><a href="Contact.aspx">Contact Us</a></li>
             </ul>
         </nav>
 

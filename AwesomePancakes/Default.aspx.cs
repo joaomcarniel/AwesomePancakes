@@ -20,7 +20,7 @@ namespace AwesomePancakes
         {
             List<object> items = new List<object>();
             string connString = System.Configuration.ConfigurationManager.ConnectionStrings["PancakeDB"].ConnectionString;
-            string query = "SELECT PancakeName, PancakeDescription, PancakePrice FROM Pancakes WHERE PancakeCategory = @Category";
+            string query = "SELECT MenuItemName, MenuItemDescription, MenuItemPrice FROM MenuItem WHERE MenuItemCategory = @Category";
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -33,9 +33,9 @@ namespace AwesomePancakes
                 {
                     items.Add(new
                     {
-                        name = reader["PancakeName"].ToString(),
-                        desc = reader["PancakeDescription"].ToString(),
-                        price =$"€{reader["PancakePrice"]}"
+                        name = reader["MenuItemName"].ToString(),
+                        desc = reader["MenuItemDescription"].ToString(),
+                        price =$"€{reader["MenuItemPrice"]}"
                     });
                 }
                 conn.Close();

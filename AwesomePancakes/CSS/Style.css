@@ -252,7 +252,7 @@ footer {
     font-weight: bold;
 }
 
-.contact-body input, .contact-body textarea {
+.booking input, .booking-body textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -262,7 +262,7 @@ footer {
     font-family: Arial, sans-serif;
 }
 
-.contact-header {
+.booking-header {
     border-radius: 12px;
     background-color: #cc6221;
     color: white;
@@ -271,11 +271,11 @@ footer {
     position: relative;
 }
 
-.contact-body textarea {
+.booking-body textarea {
     resize: vertical;
 }
 
-.contact-body .tab.active {
+.booking-body .tab.active {
     background-color: #cc6221;
     color: white;
     border: none;
@@ -287,11 +287,11 @@ footer {
     transition: 0.3s;
 }
 
-    .contact-body .tab.active:hover {
+    .booking-body .tab.active:hover {
         background-color: #e74c3c;
     }
 
-.contact-question {
+.booking-question {
     border-radius: 12px;
     padding: 15px 20px;
     cursor: pointer;
@@ -301,7 +301,7 @@ footer {
     margin-bottom: 4px;
 }
 
-.contact-answer {
+.booking-answer {
     background-color: #e3e1e1;
     border-radius: 12px;
     padding: 15px 20px;
@@ -309,7 +309,7 @@ footer {
     margin-bottom: 15px;
 }
 
-.contact-container {
+.booking-container {
     background: #ffffff;
     width: 80%;
     max-width: 600px;
@@ -319,7 +319,7 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-    .contact-container h2 {
+    .booking-container h2 {
         text-align: center;
         margin-bottom: 25px;
         color: #cc6221;
@@ -385,4 +385,56 @@ footer {
     margin-bottom: 10px;
     display: block;
     color: green;
+}
+
+.contact-body {
+    width: 80%;
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contact-title {
+    background-color: #cc6221;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.contact-subtitle {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+    .contact-card h2 {
+        margin-bottom: 12px;
+        color: #e74c3c;
+    }
+
+    .contact-card p {
+        font-size: 15px;
+        margin: 6px 0;
+    }
+
+.contact-map {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
 }
