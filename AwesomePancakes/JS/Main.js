@@ -19,35 +19,58 @@
 
                     items.forEach((item, index) => {
                         html += `
-                        <div class="menu-item">
-                            <h3>${item.name}</h3>
-                            <p>${item.desc}</p>
-                            <span class="price">${item.price}</span>
-                            <button class="add-btn" data-name="${item.name}" data-price="${item.price}">
-                                Add
-                            </button>
-                        </div>
-                    `;
+                            <div class="menu-item">
+                                <h3>${item.name}</h3>
+                                <p>${item.desc}</p>
+                                <span class="price">${item.price}</span>
+
+                                <label class="menu-select">
+                                    <input type="checkbox" class="select-item"
+                                           data-name="${item.name}" 
+                                           data-price="${item.price}">
+                                    Select
+                                </label>
+                            </div>
+                        `;
                     });
 
                     html += '</div>';
                     menuContent.html(html);
 
-                    $(".add-btn").click(function () {
-                        addItem($(this).data("name"), $(this).data("price"));
+                    $(".select-item").change(function () {
+                        const name = $(this).data("name");
+                        const price = $(this).data("price");
+
+                        if ($(this).is(":checked")) {
+                            addItem(name, price);
+                        } else {
+                            removeItemByName(name);
+                        }
                     });
                 }
             });
         }
 
         function addItem(name, price) {
-            order.push({ name, price });
+            order.push({ name, price, qty: 1 });
+            renderOrder();
+        }
+        function removeItem(index) {
+            const name = order[index].name;
+            $(`.select-item[data-name="${name}"]`).prop("checked", false);
+            order.splice(index, 1);
             renderOrder();
         }
 
-        function removeItem(index) {
-            order.splice(index, 1);
-            renderOrder();
+        function removeItemByName(name, cameFromCheckbox = false) {
+            const index = order.findIndex(i => i.name === name);
+            if (index !== -1) {
+                order.splice(index, 1);
+                renderOrder();
+            }
+            if (!cameFromCheckbox) {
+                $(`.select-item[data-name="${name}"]`).prop("checked", false);
+            }
         }
 
         function renderOrder() {
@@ -56,17 +79,46 @@
 
             order.forEach((item, index) => {
                 html += `
-                <div class="order-item">
-                    <span>${item.name} – ${item.price}</span>
-                    <button class="remove-btn" data-index="${index}">❌</button>
-                </div>
-            `;
+                    <div class="order-item">
+                        <span>${item.name} – ${item.price}</span>
+
+                        <div class="qty-box">
+                            <button class="qty-btn minus" data-index="${index}">-</button>
+                            <span class="qty-number">${item.qty}</span>
+                            <button class="qty-btn plus" data-index="${index}">+</button>
+                        </div>
+
+                        <button class="remove-btn" data-index="${index}">❌</button>
+                    </div>
+                `;
             });
 
             list.html(html);
-
             $(".remove-btn").click(function () {
                 removeItem($(this).data("index"));
+            });
+
+            $(".qty-select").change(function () {
+                const index = $(this).data("index");
+                const newQty = parseInt($(this).val());
+
+                order[index].qty = newQty;
+                updateTotal();
+            });
+
+            $(".qty-btn.plus").click(function () {
+                const index = $(this).data("index");
+                order[index].qty++;
+                renderOrder();
+            });
+
+            $(".qty-btn.minus").click(function () {
+                const index = $(this).data("index");
+
+                if (order[index].qty != 1) {
+                    order[index].qty--;
+                    renderOrder();
+                }                 
             });
 
             updateTotal();
@@ -75,7 +127,7 @@
         function updateTotal() {
             let total = 0;
             order.forEach(i => {
-                total += parseFloat(i.price.replace("€", ""));
+                total += parseFloat(i.price.replace("€", "")) * i.qty;
             });
             $("#total-price").text("€" + total.toFixed(2));
         }
