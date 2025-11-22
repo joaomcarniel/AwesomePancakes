@@ -11,7 +11,7 @@ form {
 }
 
 body {
-    background-color: #f2cd68;
+    background-color: #f5e5ba;
     height: 100%;
     margin: 0;
 }
@@ -21,41 +21,50 @@ main {
 }
 
 nav {
-    overflow: hidden;
-    background-color: #cc6221;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #8a3908;
+    height: 80px;
 }
-
-    nav li a {
-        float: left;
-        display: block;
-        color: #dec8f7;
-        text-align: center;
-        text-decoration: none;
-        padding: 10px 16px;
-    }
 
     nav ul {
         list-style-type: none;
-        display: inline;
-        padding: 16px;
-        overflow: hidden;
+        display: flex;
         margin: 0;
         padding: 0;
     }
 
-    nav li a:hover {
-        background-color: #5728b5;
-        color: #cce31b;
+    nav li {
+        margin: 0 25px;
     }
 
+        nav li a {
+            display: block;
+            font-size: 18px;
+            color: #fcdfcc;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 16px;
+        }
+
+            nav li a:hover {
+                background-color: #6b2b04;
+                color: #f7e6dc;
+                border-radius: 6px;
+            }
+
 footer {
-    background-color: #cc6221;
-    height: 40px;
+    background-color: #8a3908;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: antiquewhite;
+    color: #fcdfcc;
+    width: 100%;
+    font-size: 16px;
 }
+
 
 
 /*========================*/
@@ -118,8 +127,8 @@ footer {
 }
 
     .tab.active {
-        color: #e74c3c;
-        border-bottom: 3px solid #e74c3c;
+        color: #8a3908;
+        border-bottom: 3px solid #8a3908;
     }
 
 .menu-items {
@@ -153,7 +162,7 @@ footer {
 
 .price {
     font-weight: bold;
-    color: #e74c3c;
+    color: #8a3908;
     margin-top: 8px;
     display: block;
 }
@@ -170,7 +179,7 @@ footer {
 
     .order-calculator h2 {
         margin-bottom: 15px;
-        background-color: #cc6221;
+        background-color: #8a3908;
         color: white;
         padding: 10px;
         border-radius: 10px;
@@ -185,7 +194,7 @@ footer {
 }
 
 .remove-btn {
-    background: #e74c3c;
+    background: #8a3908;
     color: white;
     border: none;
     border-radius: 6px;
@@ -221,7 +230,7 @@ footer {
 
 .faq-header {
     border-radius: 12px;
-    background-color: #cc6221;
+    background-color: #8a3908;
     color: white;
     padding: 20px;
     text-align: center;
@@ -278,7 +287,7 @@ footer {
 }
 
 .staff-title {
-    background-color: #cc6221;
+    background-color: #8a3908;
     color: white;
     padding: 20px;
     border-radius: 12px;
@@ -316,7 +325,7 @@ footer {
 
 .staff-card h4 {
     margin: 0 0 12px;
-    color: #e74c3c;
+    color: #8a3908;
 }
 
 .staff-card p {
@@ -493,7 +502,7 @@ footer {
     }
 
 .highlight {
-    color: #cc6221;
+    color: #8a3908;
     font-weight: bold;
 }
 
@@ -520,7 +529,7 @@ footer {
 
 .booking-header {
     border-radius: 12px;
-    background-color: #cc6221;
+    background-color: #8a3908;
     color: white;
     padding: 20px;
     text-align: center;
@@ -532,7 +541,7 @@ footer {
 }
 
 .booking-body .tab.active {
-    background-color: #cc6221;
+    background-color: #8a3908;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -544,7 +553,7 @@ footer {
 }
 
     .booking-body .tab.active:hover {
-        background-color: #e74c3c;
+        background-color: #8a3908;
     }
 
 .booking-question {
@@ -578,7 +587,7 @@ footer {
     .booking-container h2 {
         text-align: center;
         margin-bottom: 25px;
-        color: #cc6221;
+        color: #8a3908;
         font-family: Arial, sans-serif;
     }
 
@@ -611,7 +620,8 @@ footer {
 }
 
 .btn-enviar {
-    background-color: #cc6221;
+    background-color: #8a3908;
+    color: #fcdfcc;
     padding: 12px 20px;
     border: none;
     border-radius: 10px;
@@ -623,6 +633,7 @@ footer {
 
     .btn-enviar:hover {
         background-color: #b0551d;
+        color: #f7e6dc;
     }
 
 .status {
@@ -659,7 +670,7 @@ footer {
 }
 
 .contact-title {
-    background-color: #cc6221;
+    background-color: #8a3908;
     color: white;
     padding: 20px;
     border-radius: 12px;
@@ -688,7 +699,7 @@ footer {
 
     .contact-card h2 {
         margin-bottom: 12px;
-        color: #e74c3c;
+        color: #8a3908;
     }
 
     .contact-card p {
