@@ -117,8 +117,8 @@
 
                 if (order[index].qty != 1) {
                     order[index].qty--;
-                    renderOrder();
-                }                 
+                }           
+                renderOrder();
             });
 
             updateTotal();

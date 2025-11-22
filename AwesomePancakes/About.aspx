@@ -10,10 +10,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="about-body">
-      <h1>🥞 Sobre a Pancake House</h1>
-      <p>Bem-vindo à <span class="highlight">Pancake House</span> — o lugar onde cada panqueca é feita com carinho e ingredientes selecionados!</p>
-      <p>Nascemos em Dublin com o sonho de unir o sabor das panquecas caseiras com o toque criativo das receitas modernas. Aqui, você encontra desde panquecas doces com frutas frescas 🍓 até opções salgadas com queijo e bacon 🧀🥓.</p>
-      <p>Nosso objetivo é simples: fazer você sorrir a cada mordida. 😋</p>
+      <h1>🥞 We are Awesome Pancake</h1>
+      <p>Welcome to our <span class="highlight">Home</span> — the place where every pancake is made with love and carefully selected ingredients!</p>
+      <p>We were born in Dublin with the dream of combining the taste of homemade pancakes with the creative touch of modern recipes. Here, you'll find everything from sweet pancakes with fresh fruit 🍓 to savory options with cheese and bacon 🧀🥓.</p>
+      <p>Our goal is simple: to make you smile with every bite. 😋</p>
     </div>
 
 </asp:Content>
