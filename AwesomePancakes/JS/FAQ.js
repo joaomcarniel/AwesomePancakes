@@ -2,10 +2,7 @@
     const currentPage = window.location.pathname.split("/").pop().toLowerCase();
 
     if (currentPage.includes("faq")) {
-
         function RenderFaq() {
-            console.log("AQui estou mais um dia");
-
             $.ajax({
                 type: "POST",
                 url: "FAQ.aspx/GetFaqItems",

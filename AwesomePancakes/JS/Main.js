@@ -141,18 +141,4 @@
             renderMenu(target);
         });
     }
-
-    // --- About.aspx --- //
-    if (currentPage.includes("about")) {
-        console.log("📄 Página About detectada");
-
-        // Aqui você coloca o JS específico da About page
-        // Exemplo: animações, fades, ou carregar dados via AJAX
-        $(".about-section").hide().fadeIn(1000);
-
-        $("#show-more").click(function () {
-            $(".extra-info").slideToggle();
-        });
-    }
-
 });

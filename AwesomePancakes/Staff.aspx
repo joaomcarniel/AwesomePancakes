@@ -10,4 +10,17 @@
         <h1 class="staff-title">Meet Our Team</h1>
         <div id="staff-container"></div>
     </div>
+
+    <div id="staff-overlay" class="overlay">
+        <div class="expanded-card">
+            <button id="close-staff-modal" class="close-btn">X</button>
+            <div class="modal-content">
+                <img id="modal-photo" class="modal-photo" />
+                <h2 id="modal-name"></h2>
+                <h3 id="modal-role"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
 </asp:Content>
+
