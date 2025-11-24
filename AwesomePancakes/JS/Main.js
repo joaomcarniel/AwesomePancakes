@@ -1,7 +1,8 @@
 ﻿$(document).ready(function () {
-    const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+    let currentPage = window.location.pathname.split("/").pop().toLowerCase();
 
-    // --- Default.aspx --- //
+    if (currentPage === "") currentPage = "default.aspx";
+
     if (currentPage.includes("default")) {
         const tabs = $(".tab");
         const menuContent = $("#menu-content");
@@ -19,23 +20,27 @@
 
                     items.forEach((item, index) => {
                         html += `
-                            <div class="menu-item">
-                                <h3>${item.name}</h3>
-                                <p>${item.desc}</p>
-                                <span class="price">${item.price}</span>
+                                <div class="menu-item">
+                                    <h3>${item.name}</h3>
+                                    <p>${item.desc}</p>
+                                    <span class="price">${item.price}</span>
 
-                                <label class="menu-select">
-                                    <input type="checkbox" class="select-item"
-                                           data-name="${item.name}" 
-                                           data-price="${item.price}">
-                                    Select
-                                </label>
-                            </div>
-                        `;
+                                    <label class="menu-select">
+                                        <input type="checkbox" class="select-item"
+                                               data-name="${item.name}" 
+                                               data-price="${item.price}">
+                                        Select
+                                    </label>
+                                </div>
+                            `;
                     });
 
                     html += '</div>';
                     menuContent.html(html);
+
+                    order.forEach(item => {
+                        $(`.select-item[data-name="${item.name}"]`).prop("checked", true);
+                    });
 
                     $(".select-item").change(function () {
                         const name = $(this).data("name");

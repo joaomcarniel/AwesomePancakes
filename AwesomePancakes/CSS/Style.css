@@ -187,11 +187,16 @@ footer {
     }
 
 .order-item {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 120px 40px; /* nome | qty | X */
+    align-items: center;
     padding: 8px 0;
     border-bottom: 1px solid #eee;
 }
+
+    .order-item span {
+        font-weight: 500;
+    }
 
 .remove-btn {
     background: #8a3908;
