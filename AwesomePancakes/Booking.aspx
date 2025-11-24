@@ -51,13 +51,13 @@
         <div class="form-group">
             <asp:Label ID="lblDate" runat="server" Text="Choose the Date:" CssClass="form-label"></asp:Label>
             <asp:TextBox ID="txtDate" runat="server" TextMode="Date"
-                ClientIDMode="Static" CssClass="txt-booking" onchange="GetSchedules()"></asp:TextBox>
+                ClientIDMode="Static" CssClass="txt-booking" ></asp:TextBox>
             <asp:Label ID="lblDateError" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
         <div class="form-group">
             <asp:Label ID="lblSchedule" runat="server" Text="Available Times:" CssClass="form-label"></asp:Label>
-            <select id="ddlSchedule" name="ddlSchedule" class="txt-booking"></select>
+            <select id="ddlSchedule" name="ddlSchedule" class="txt-booking" onfocus="GetSchedules()"></select>
             <asp:Label ID="lblScheduleError" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
