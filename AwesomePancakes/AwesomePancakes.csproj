@@ -74,6 +74,7 @@
     <Content Include="FAQ.aspx" />
     <Content Include="Global.asax" />
     <Content Include="JS\About.js" />
+    <Content Include="JS\Booking.js" />
     <Content Include="JS\FAQ.js" />
     <Content Include="JS\Main.js" />
     <Content Include="CSS\Style.css" />

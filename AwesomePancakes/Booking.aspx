@@ -3,37 +3,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="<%= ResolveUrl("~/CSS/Style.css") %>?v=<%= DateTime.Now.Ticks %>">
-
-    <script type="text/javascript">
-        function GetSchedules() {
-            var date = document.getElementById('<%= txtDate.ClientID %>').value;
-            if (!date) return;
-
-            PageMethods.GetBusySchedules(date, function (busy) {
-                var ddl = document.getElementById("ddlSchedule");
-                ddl.innerHTML = "";
-
-                var schedules = ["09:00:00", "10:00:00", "11:00:00", "14:00:00", "15:00:00", "16:00:00"];
-
-                schedules.forEach(function (s) {
-                    var option = document.createElement("option");
-                    option.value = s;
-
-                    if (busy.includes(s)) {
-                        option.text = s + " (sold out)";
-                        option.disabled = true;
-                        option.style.color = "gray";
-                    } else {
-                        option.text = s;
-                    }
-
-                    ddl.appendChild(option);
-                });
-
-                ddl.selectedIndex = -1;
-            });
-        }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="<%= ResolveUrl("~/JS/Booking.js") %>?v=<%= DateTime.Now.Ticks %>"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -56,7 +28,7 @@
         <div class="form-group">
             <asp:Label ID="lblDate" runat="server" Text="Choose the Date:" CssClass="form-label"></asp:Label>
             <asp:TextBox ID="txtDate" runat="server" TextMode="Date"
-                CssClass="txt-booking" onchange="GetSchedules()"></asp:TextBox>
+                ClientIDMode="Static" CssClass="txt-booking" onchange="GetSchedules()"></asp:TextBox>
         </div>
 
         <div class="form-group">
