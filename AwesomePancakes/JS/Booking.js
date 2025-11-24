@@ -9,9 +9,11 @@
 
 function GetSchedules() {
     var date = document.getElementById("txtDate").value;
+    var numPeople = document.getElementById("ddlNumPeople").value;
+
     if (!date) return;
 
-    PageMethods.GetBusySchedules(date, function (busy) {
+    PageMethods.GetBusySchedules(date, numPeople, function (busy) {
         var ddl = document.getElementById("ddlSchedule");
         ddl.innerHTML = "";
 

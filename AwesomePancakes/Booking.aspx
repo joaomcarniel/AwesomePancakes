@@ -13,27 +13,52 @@
     <div class="booking-container">
         <h2>Make your Reservation</h2>
 
-        <asp:Label ID="lblStatus" runat="server" CssClass="status"></asp:Label>
-
         <div class="form-group">
             <asp:Label ID="lblName" runat="server" Text="Name:" CssClass="form-label"></asp:Label>
             <asp:TextBox ID="txtName" runat="server" CssClass="txt-booking"></asp:TextBox>
+            <asp:Label ID="lblNameError" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
         <div class="form-group">
             <asp:Label ID="lblEmail" runat="server" Text="Email:" CssClass="form-label"></asp:Label>
             <asp:TextBox ID="txtEmail" runat="server" CssClass="txt-booking"></asp:TextBox>
+            <asp:Label ID="lblEmailError" runat="server" ForeColor="Red"></asp:Label>
+        </div>
+
+        <div class="form-group">
+            <asp:Label ID="lblTelephone" runat="server" Text="Telephone:" CssClass="form-label"></asp:Label>
+            <asp:TextBox ID="txtTelephone" runat="server" CssClass="txt-booking"></asp:TextBox>
+            <asp:Label ID="lblTelephoneError" runat="server" ForeColor="Red"></asp:Label>
+        </div>
+
+        <div class="form-group">
+            <asp:Label ID="lblNumPeople" runat="server" Text="Number of People:" CssClass="form-label"></asp:Label>
+
+            <asp:DropDownList ID="ddlNumPeople" runat="server" CssClass="txt-booking" ClientIDMode="Static">
+                <asp:ListItem Text="1" Value="1"></asp:ListItem>
+                <asp:ListItem Text="2" Value="2"></asp:ListItem>
+                <asp:ListItem Text="3" Value="3"></asp:ListItem>
+                <asp:ListItem Text="4" Value="4"></asp:ListItem>
+                <asp:ListItem Text="5" Value="5"></asp:ListItem>
+                <asp:ListItem Text="6" Value="6"></asp:ListItem>
+                <asp:ListItem Text="7" Value="7"></asp:ListItem>
+                <asp:ListItem Text="8" Value="8"></asp:ListItem>
+            </asp:DropDownList>
+
+            <asp:Label ID="lblNumPeopleError" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
         <div class="form-group">
             <asp:Label ID="lblDate" runat="server" Text="Choose the Date:" CssClass="form-label"></asp:Label>
             <asp:TextBox ID="txtDate" runat="server" TextMode="Date"
                 ClientIDMode="Static" CssClass="txt-booking" onchange="GetSchedules()"></asp:TextBox>
+            <asp:Label ID="lblDateError" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
         <div class="form-group">
             <asp:Label ID="lblSchedule" runat="server" Text="Available Times:" CssClass="form-label"></asp:Label>
             <select id="ddlSchedule" name="ddlSchedule" class="txt-booking"></select>
+            <asp:Label ID="lblScheduleError" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
         <div class="form-group">
@@ -42,5 +67,7 @@
         </div>
 
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn-enviar" OnClick="btnSubmit_Click" />
+
+        <asp:Label ID="lblStatus" runat="server" CssClass="status"></asp:Label>
     </div>
 </asp:Content>
