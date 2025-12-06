@@ -23,16 +23,16 @@
             </div>
             <div class="contact-card">
                 <h2>Get in Touch</h2>
-                <p><strong>Email:</strong> contact@pancakehouse.com</p>
+                <p><strong>Email:</strong> contact@awesomepancake.com</p>
                 <p><strong>Phone:</strong> +353 89 123 4567</p>
                 <p><strong>Address:</strong><br>
-                    Pancake House<br>
+                    Awesome Pancake<br>
                     12 Breakfast Street<br>
                     Dublin, Ireland
                 </p>
                 <h2>Opening Hours</h2>
-                <p>Monday – Friday: 8:00 AM – 6:00 PM</p>
-                <p>Saturday – Sunday: 9:00 AM – 8:00 PM</p>
+                <p>Monday – Friday: 8:00 AM – 21:00 PM</p>
+                <p>Saturday – Sunday: 8:00 AM – 21:00 PM</p>
             </div>
         </div>
     </div>

@@ -8,7 +8,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <div class="about-body">
       <h1>🥞 We are Awesome Pancake</h1>
       <p>Welcome to our <span class="highlight">Home</span> — the place where every pancake is made with love and carefully selected ingredients!</p>
@@ -26,6 +25,4 @@
 
         <button type="button" class="carousel-btn next">&#10095;</button>
     </div>
-
-
 </asp:Content>

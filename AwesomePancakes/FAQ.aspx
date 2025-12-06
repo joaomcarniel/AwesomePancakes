@@ -12,7 +12,6 @@
             <h1>Frequently Asked Questions</h1>
         </div>
         <div id="menu-content-faq"></div>
-	    
     </div>
     
 </asp:Content>

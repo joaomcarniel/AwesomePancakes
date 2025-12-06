@@ -84,14 +84,11 @@
 --INSERT INTO BookingTables(IdBooking, TableNumber)
 --VALUES (7, 1), (8,1), (9, 2);
 
---use PancakeDB
-SELECT * FROM Booking;
---SELECT * FROM RestaurantTables;
-
 --UPDATE BookingTables SET TimeBooking = '19:00:00.0000000', DateBooking = '2025-11-25' WHERE IdBooking = 7;
 --UPDATE BookingTables SET TimeBooking = '20:00:00.0000000', DateBooking = '2025-11-25' WHERE IdBooking = 8;
 --UPDATE BookingTables SET TimeBooking = '20:00:00.0000000', DateBooking = '2025-11-25' WHERE IdBooking = 9;
---SELECT * FROM BookingTables;
+
+-- ALTER TABLE Booking ADD Telephone nvarchar(20);
 /*
 1. Criar a tabela de mesas (numero da mesa e qtd de pessoas)
 2. Verificar no booking se tem mesas disponiveis pra quantidade de pessoas para aquela hora;
@@ -104,5 +101,13 @@ SELECT * FROM Booking;
 --WHERE DateBooking = '2025-11-20'
 --GROUP BY TimeBooking;
 
-SELECT MAX(TableNumber) + 1 NextAvailable  FROM BookingTables WHERE DateBooking = '2025-11-25' AND  TimeBooking = '19:00:00.0000000';
+--SELECT MAX(TableNumber) + 1 as 'NextAvailable'  FROM BookingTables WHERE DateBooking = '2025-11-25' AND  TimeBooking = '19:00:00.0000000';
+
+--SELECT ISNULL(MAX(TableNumber) + 1, 1) AS NextAvailable  FROM BookingTables WHERE DateBooking = '2025-11-25' AND  TimeBooking = '13:00:00.0000000';
+----use PancakeDB
+SELECT * FROM Booking;
+--SELECT * FROM BookingTables;
+----SELECT * FROM RestaurantTables;
+
+--SELECT * FROM BookingTables;
 

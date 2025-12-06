@@ -23,7 +23,6 @@
                     html += '</div>';
                     $("#menu-content-faq").html(html);
 
-                    // Add toggle behavior AFTER rendering
                     $(".faq-answer").hide();
 
                     $(".faq-question").click(function () {
@@ -35,7 +34,6 @@
                 }
             });
         }
-
         RenderFaq();
     }
 });

@@ -11,14 +11,9 @@ function GetSchedules() {
         alert("Please choose a date first.");
         return;
     }
-
-    // ----- BLOQUEAR AGORA + 2 HORAS -----
     const now = new Date();
-    const minAllowed = new Date(now.getTime() + 2 * 60 * 60 * 1000); // agora + 2h
-
+    const minAllowed = new Date(now.getTime() + 2 * 60 * 60 * 1000);
     const selectedDate = new Date(date + "T00:00:00");
-
-    // Se for hoje, bloqueia horários antes de minAllowed
     const isToday =
         selectedDate.getFullYear() === now.getFullYear() &&
         selectedDate.getMonth() === now.getMonth() &&
@@ -29,7 +24,7 @@ function GetSchedules() {
         var ddl = document.getElementById("ddlSchedule");
         ddl.innerHTML = "";
 
-        var schedules = ["09:00:00", "10:00:00", "11:00:00", "14:00:00", "15:00:00",
+        var schedules = ["08:00:00","09:00:00", "10:00:00", "11:00:00", "14:00:00", "15:00:00",
             "16:00:00", "17:00:00", "18:00:00", "19:00:00", "20:00:00", "21:00:00"];
 
         schedules.forEach(function (s) {
@@ -50,7 +45,6 @@ function GetSchedules() {
             else {
                 option.text = s;
             }
-
             ddl.appendChild(option);
         });
 
